@@ -7,54 +7,56 @@ import Image from "next/image";
 export default function IndexPage() {
   return (
     <>
-      <div className="container px-12 mb-24 xl:mt-24 2xl:mt-36 prose max-w-none w-fit">
-        <div className="max-w-[986px]">
+      <div className="container px-12 mb-36 mt-20 xl:mt-32 max-w-none w-fit">
+        <div className="max-w-[1024px]">
           {/* Title */}
           <div>
-            <h1 id="title">
-              <div className="text-6xl font-bold leading-relaxed">
-                <span>M</span>
-                <span className="bg-gradient-to-r from-gray-600 to-gray-300 bg-clip-text text-transparent tracking-tighter">
-                  usculo
-                </span>
-                <span>S</span>
-                <span className="bg-gradient-to-r from-gray-300 to-gray-400 bg-clip-text text-transparent tracking-tighter">
-                  keletal
-                </span>
-                <span>-</span>
-                <span className="tracking-tight">MANO</span>
-              </div>
-              <div className="text-4xl text-gray-800 font-medium tracking-[-0.02em]">
-                Enabling Hand Pose Tracking with Biomechanical Constraints
-              </div>
+            <div>
+              <div className="font-semibold text-gray-900">CVPR-24</div>
+              <h1 id="title">
+                <div className="text-6xl font-bold mt-1">
+                  <span>M</span>
+                  <span className="bg-gradient-to-r from-gray-600 to-gray-300 bg-clip-text text-transparent tracking-tighter">
+                    usculo
+                  </span>
+                  <span>S</span>
+                  <span className="bg-gradient-to-r from-gray-300 to-gray-400 bg-clip-text text-transparent tracking-tighter">
+                    keletal
+                  </span>
+                  <span>-</span>
+                  <span className="tracking-tight">MANO</span>
+                </div>
+                <div className="text-4xl text-gray-800 font-medium tracking-[-0.02em] mt-4 ">
+                  Enabling Hand Pose Tracking with Biomechanical Constraints
+                </div>
+              </h1>
+            </div>
 
-              {/* <Separator /> */}
-            </h1>
-
-            <div className="flex text-xl text-black space-x-4">
-              {authorList.map((author, index) => (
-                <div key={index}>
-                  <div className="font-semibold leading-loose tracking-tight">
-                    {author.name}
-                    <sup>{author.sup}</sup>
+            <div className="mt-10">
+              <div className="flex text-2xl text-black space-x-4">
+                {authorList.map((author, index) => (
+                  <div key={index}>
+                    <div className="font-semibold leading-loose tracking-tight">
+                      {author.name}
+                      <sup>{author.sup}</sup>
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
+              <div className="flex space-x-4">
+                {institutionList.map((institution, index) => (
+                  <div key={index} className="text-xl">
+                    <sup>{institution.id}</sup>
+                    {institution.name}
+                  </div>
+                ))}
+              </div>
             </div>
-            <div className="flex space-x-4">
-              {institutionList.map((institution, index) => (
-                <div key={index} className="text-lg">
-                  <sup>{institution.id}</sup>
-                  {institution.name}
-                </div>
-              ))}
-            </div>
-
-            <div className="pt-12 flex items-end space-x-6"></div>
+            {/* <div className="text-lg mt-10 font-normal"></div> */}
           </div>
 
           {/* Links */}
-          <div className="flex items-end mb-12">
+          <div className="flex items-end mt-16 ">
             {/* <div className="w-1/4">
               <Image
                 src="/cvpr.svg"
@@ -65,38 +67,22 @@ export default function IndexPage() {
               />
             </div> */}
             <div className="flex-1 mr-6">
-              <Separator className="my-0.5 h-[1px]" />
-              <div className="flex justify-start space-x-6">
+              <Separator className="my-0.5 h-[0.5px] bg-black" />
+              <div className="flex justify-center space-x-6">
                 <LinkButton label="Read Paper" href="/paper" />
                 <LinkButton label="View Code" href="/code" />
                 <LinkButton label="Watch Video" href="/video" />
                 <LinkButton label="Supplementary Materials" href="/supp" />
               </div>
-              <Separator className="my-0.5 h-[1px]" />
+              <Separator className="my-0.5 h-[0.5px] bg-black" />
             </div>
           </div>
 
-          {/* Images */}
-          <div className="w-auto flex space-x-12 my-32 mr-6">
-            {bannerImages.map((image, index) => (
-              <div className="flex-1 drop-shadow-2xl" key={index}>
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  width={0}
-                  height={0}
-                  className="w-auto not-prose"
-                  unoptimized
-                />
-                <div className="not-prose text-gray-500 w-fit mx-auto mt-6 text-md font-bold">
-                  {image.caption}
-                </div>
-              </div>
-            ))}
-          </div>
           {/* abstract */}
-          <div className="flex mb-16">
-            <h2 className="mt-0 w-1/4 flex-shrink-0 text-2xl">Abstract</h2>
+          <div className="flex mt-14">
+            <h2 className="mt-1 w-1/4 flex-shrink-0 text-3xl font-semibold">
+              Abstract
+            </h2>
             <div className="text-xl leading-normal text-black text-justify font-serif mr-6">
               This work proposes a novel learning framework for visual hand
               dynamics analysis that takes into account the physiological
@@ -119,8 +105,29 @@ export default function IndexPage() {
             </div>
           </div>
 
-          <div className="flex">
-            <h2 className="mt-0 w-1/4 flex-shrink-0">Pipeline</h2>
+          {/* Images */}
+          <div className="w-auto flex space-x-12 mt-16 mr-6">
+            {bannerImages.map((image, index) => (
+              <div className="flex-1 drop-shadow-2xl" key={index}>
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  width={0}
+                  height={0}
+                  className="w-auto not-prose"
+                  unoptimized
+                />
+                <div className="not-prose text-gray-500 text-center text-balance w-fit mx-auto mt-6 text-md font-bold">
+                  {image.caption}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="flex mt-24">
+            <h2 className="mt-1 w-1/4 flex-shrink-0 text-3xl font-semibold">
+              Pipeline
+            </h2>
             <Image
               src="/pipeline.svg"
               alt="pipeline"

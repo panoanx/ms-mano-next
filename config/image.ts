@@ -5,11 +5,11 @@ export interface ImageProps {
 }
 
 export const bannerImages = [
-  { src: "/mesh.webp", alt: "Mano model", caption: "MANO" },
+  { src: "/mesh.webp", alt: "Mano model", caption: "The parametric MANO model" },
   {
     src: "/skeleton.webp",
     alt: "Musculoskeletal Structure",
-    caption: "Muscle & Skeleton",
+    caption: "Musculoskeletal structure of hands",
   },
-  { src: "/msmano.webp", alt: "MS-MANO", caption: "MS-MANO" },
+  { src: "/msmano.webp", alt: "MS-MANO", caption: "The proposed MS-MANO model" },
 ];
