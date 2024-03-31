@@ -7,7 +7,7 @@ export default function IndexPage() {
     <>
       <div className="container px-12 mt-24 prose max-w-none w-fit">
         {/* Title */}
-        <div className="max-w-[987px]">
+        <div className="max-w-[986px]">
           <h1 id="title">
             <div className="text-6xl font-bold leading-relaxed">
               <span>M</span>
@@ -42,9 +42,14 @@ export default function IndexPage() {
           </div>
         </div>
 
-        <div className="py-12">
+        <div className="py-12 max-w-[986px]">
           <Separator className="my-0.5 h-[1.5px]" />
-          <LinkButton label="Read Paper" href="/paper" />
+          <div className="flex justify-start space-x-6">
+            <LinkButton label="Read Paper" href="/paper" />
+            <LinkButton label="View Code" href="/code" />
+            <LinkButton label="Watch Video" href="/video" />
+            <LinkButton label="Supplementary Materials" href="/supp" />
+          </div>
           <Separator className="my-0.5 h-[1.5px]" />
         </div>
 
