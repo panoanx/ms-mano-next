@@ -7,12 +7,12 @@ import Image from "next/image";
 export default function IndexPage() {
   return (
     <>
-      <div className="container px-12 mb-36 mt-20 xl:mt-32 max-w-none w-fit">
+      <div className="container px-12 mb-64 mt-20 xl:mt-32 max-w-none w-fit">
         <div className="max-w-[1024px]">
           {/* Title */}
           <div>
             <div>
-              <div className="font-semibold text-gray-900">CVPR-24</div>
+              <div className="font-semibold text-black">CVPR-24</div>
               <h1 id="title">
                 <div className="text-6xl font-bold mt-1">
                   <span>M</span>
@@ -26,16 +26,16 @@ export default function IndexPage() {
                   <span>-</span>
                   <span className="tracking-tight">MANO</span>
                 </div>
-                <div className="text-4xl text-gray-800 font-medium tracking-[-0.02em] mt-4 ">
+                <div className="text-4xl text-black font-medium tracking-[-0.02em] mt-4 ">
                   Enabling Hand Pose Tracking with Biomechanical Constraints
                 </div>
               </h1>
             </div>
 
-            <div className="mt-10">
-              <div className="flex text-2xl text-black space-x-4">
+            <div className="mt-12">
+              <div className="flex flex-wrap text-2xl text-black">
                 {authorList.map((author, index) => (
-                  <div key={index}>
+                  <div key={index} className="flex-shrink-0 mr-4">
                     <div className="font-semibold leading-loose tracking-tight">
                       {author.name}
                       <sup>{author.sup}</sup>
@@ -56,7 +56,7 @@ export default function IndexPage() {
           </div>
 
           {/* Links */}
-          <div className="flex items-end mt-16 ">
+          <div className="flex items-end mt-24 ">
             {/* <div className="w-1/4">
               <Image
                 src="/cvpr.svg"
@@ -69,17 +69,21 @@ export default function IndexPage() {
             <div className="flex-1 mr-6">
               <Separator className="my-0.5 h-[0.5px] bg-black" />
               <div className="flex justify-center space-x-6">
-                <LinkButton label="Read Paper" href="/paper" />
-                <LinkButton label="View Code" href="/code" />
-                <LinkButton label="Watch Video" href="/video" />
-                <LinkButton label="Supplementary Materials" href="/supp" />
+                <LinkButton label="Read Paper" href="/paper.pdf" />
+                <LinkButton label="View Code" href="/" disabled={true} />
+                <LinkButton label="Watch Video" href="/" disabled={true} />
+                <LinkButton
+                  label="Supplementary Materials"
+                  href="/"
+                  disabled={true}
+                />
               </div>
               <Separator className="my-0.5 h-[0.5px] bg-black" />
             </div>
           </div>
 
           {/* abstract */}
-          <div className="flex mt-14">
+          <div className="flex mt-16">
             <h2 className="mt-1 w-1/4 flex-shrink-0 text-3xl font-semibold">
               Abstract
             </h2>
@@ -106,7 +110,7 @@ export default function IndexPage() {
           </div>
 
           {/* Images */}
-          <div className="w-auto flex space-x-12 mt-16 mr-6">
+          <div className="w-auto flex space-x-12 mt-36 mr-6">
             {bannerImages.map((image, index) => (
               <div className="flex-1 drop-shadow-2xl" key={index}>
                 <Image
@@ -117,14 +121,14 @@ export default function IndexPage() {
                   className="w-auto not-prose"
                   unoptimized
                 />
-                <div className="not-prose text-gray-500 text-center text-balance w-fit mx-auto mt-6 text-md font-bold">
+                <div className="not-prose text-gray-950 text-center text-balance w-fit mx-auto mt-6 text-md">
                   {image.caption}
                 </div>
               </div>
             ))}
           </div>
 
-          <div className="flex mt-24">
+          <div className="flex mt-40">
             <h2 className="mt-1 w-1/4 flex-shrink-0 text-3xl font-semibold">
               Pipeline
             </h2>
@@ -135,6 +139,19 @@ export default function IndexPage() {
               height={0}
               className="flex-1 pr-4"
             />
+          </div>
+
+          <div className="flex mt-24">
+            <h2 className="mt-0 w-1/4 flex-shrink-0 text-3xl font-semibold">
+              Contact
+            </h2>
+            <div className="text-xl leading-normal text-black text-justify font-serif mr-6">
+              If you have any inquiries or require further clarification
+              regarding the paper, its associated code, or any other related
+              questions, we encourage you to get in touch with us. Please feel
+              free to send your questions via email to{" "}
+              <code className="text-sm mx-1">xiepf2002 # gmail.com</code>.
+            </div>
           </div>
         </div>
       </div>

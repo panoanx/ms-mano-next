@@ -3,9 +3,9 @@ import "./globals.css";
 import { TailwindIndicator } from "@/components/tailwind-indicator";
 
 export const metadata: Metadata = {
-  title: "CVPR24 MS-MANO",
+  title: "MS-MANO",
   description:
-    "MS-MANO: Enabling Hand Pose Tracking with Biomechanical Constraints",
+    'Project Page for the CVPR 2024 paper: "MS-MANO: Enabling Hand Pose Tracking with Biomechanical Constraints"',
 };
 
 export default function RootLayout({
