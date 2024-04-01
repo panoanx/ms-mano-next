@@ -12,7 +12,9 @@ export default function IndexPage() {
           {/* Title */}
           <div>
             <div>
-              <div className="font-semibold pl-0.5 text-lg text-black">CVPR&apos;24</div>
+              <div className="font-semibold pl-0.5 text-lg text-black">
+                CVPR&apos;24
+              </div>
               <h1 id="title">
                 <div className="text-6xl font-bold mt-1">
                   <span>M</span>
@@ -139,6 +141,75 @@ export default function IndexPage() {
               height={0}
               className="flex-1 pr-4"
             />
+          </div>
+
+          <div className="flex mt-24">
+            <h2 className="mt-0 w-1/4 flex-shrink-0 text-3xl font-semibold">
+              Results
+            </h2>
+
+            <div className="w-full grid grid-cols-2 mr-4 gap-x-4 gap-y-6">
+              <Image
+                src="/results/hand_ours_0_opt.gif"
+                width={0}
+                height={0}
+                alt="Results 0"
+                placeholder="blur"
+                blurDataURL="/results/hand_ours_0_opt_blur.gif"
+                className="w-full rounded"
+                unoptimized
+              />
+              <Image
+                src="/results/hand_ours_1_opt.gif"
+                width={0}
+                height={0}
+                alt="Results 1"
+                placeholder="blur"
+                blurDataURL="/results/hand_outs_1_opt_blur.gif"
+                className="w-full rounded"
+                unoptimized
+              />
+              <Image
+                src="/results/oakink_ours_0_opt.gif"
+                width={0}
+                height={0}
+                alt="Results 2"
+                placeholder="blur"
+                blurDataURL="/results/oakink_ours_0_opt_blur.gif"
+                className="w-full rounded"
+                unoptimized
+              />
+              <Image
+                src="/results/oakink_ours_1_opt.gif"
+                width={0}
+                height={0}
+                alt="Results 3"
+                placeholder="blur"
+                blurDataURL="/results/oakink_ours_1_opt_blur.gif"
+                className="w-full rounded"
+                unoptimized
+              />
+              <Image
+                src="/results/oakink_ours_2_opt.gif"
+                width={0}
+                height={0}
+                alt="Results 2"
+                placeholder="blur"
+                blurDataURL="/results/oakink_ours_2_opt_blur.gif"
+                className="w-full rounded"
+                unoptimized
+              />
+              <Image
+                src="/results/oakink_ours_3_opt.gif"
+                width={0}
+                height={0}
+                alt="Results 3"
+                placeholder="blur"
+                blurDataURL="/results/oakink_ours_3_opt_blur.gif"
+                className="w-full rounded"
+                unoptimized
+              />
+            </div>
           </div>
 
           <div className="flex mt-24">

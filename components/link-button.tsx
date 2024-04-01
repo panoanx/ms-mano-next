@@ -37,7 +37,7 @@ export function LinkButton({ label, href, disabled = false }: LinkButtonProps) {
             {label}
           </div>
           {disabled ? (
-            <div className="ml-2 text-blue-600 text-[11px] tracking-tighter leading-[8px]">
+            <div className="ml-2 bg-blue-50 border border-blue-200 px-1 pt-1 pb-0.5 rounded text-blue-600 text-[9px] tracking-tighter leading-[6px]">
               <div>coming</div>
               <div>soon</div>
             </div>
