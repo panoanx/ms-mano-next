@@ -12,15 +12,15 @@ export default function IndexPage() {
           {/* Title */}
           <div>
             <div>
-              <div className="font-semibold text-black">CVPR-24</div>
+              <div className="font-semibold pl-0.5 text-lg text-black">CVPR&apos;24</div>
               <h1 id="title">
                 <div className="text-6xl font-bold mt-1">
                   <span>M</span>
-                  <span className="bg-gradient-to-r from-gray-600 to-gray-300 bg-clip-text text-transparent tracking-tighter">
+                  <span className="bg-gradient-to-r from-gray-700 via-gray-400 to-gray-300 bg-clip-text text-transparent tracking-tighter">
                     usculo
                   </span>
                   <span>S</span>
-                  <span className="bg-gradient-to-r from-gray-300 to-gray-400 bg-clip-text text-transparent tracking-tighter">
+                  <span className="bg-gradient-to-r from-gray-200 to-gray-500 bg-clip-text text-transparent tracking-tighter">
                     keletal
                   </span>
                   <span>-</span>

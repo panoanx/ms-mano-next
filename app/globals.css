@@ -66,6 +66,11 @@
     --input: 0 0% 14.9%;
     --ring: 0 0% 83.1%;
   }
+
+  ::selection {
+    color: hsl(var(--muted));
+    background: hsl(var(--primary));
+  }
 }
 
 @layer base {
