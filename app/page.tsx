@@ -1,7 +1,8 @@
 import { LinkButton } from "@/components/link-button";
+import { ResultImage } from "@/components/result-image";
 import { Separator } from "@/components/ui/separator";
 import { authorList, institutionList } from "@/config/author";
-import { bannerImages } from "@/config/image";
+import { bannerImages, resultImages } from "@/config/image";
 import Image from "next/image";
 
 export default function IndexPage() {
@@ -12,17 +13,27 @@ export default function IndexPage() {
           {/* Title */}
           <div>
             <div>
-              <div className="font-semibold pl-0.5 text-lg text-black">
-                CVPR&apos;24
+              <div className="w-1/6 flex items-end gap-4">
+                <Image
+                  src="/cvpr.svg"
+                  alt="CVPR 2024"
+                  width={0}
+                  height={0}
+                  className="inline-block mt-0 mb-1 w-5/6"
+                />
+                <div className="font-semibold pl-0.5 text-lg text-black">
+                  CVPR&apos;24
+                </div>
               </div>
+
               <h1 id="title">
                 <div className="text-6xl font-bold mt-1">
                   <span>M</span>
-                  <span className="bg-gradient-to-r from-gray-700 via-gray-400 to-gray-300 bg-clip-text text-transparent tracking-tighter">
+                  <span className="bg-gradient-to-r from-gray-500  to-gray-200 bg-clip-text text-transparent tracking-tighter">
                     usculo
                   </span>
                   <span>S</span>
-                  <span className="bg-gradient-to-r from-gray-200 to-gray-500 bg-clip-text text-transparent tracking-tighter">
+                  <span className="bg-gradient-to-r from-gray-200 to-gray-400 bg-clip-text text-transparent tracking-tighter">
                     keletal
                   </span>
                   <span>-</span>
@@ -59,15 +70,6 @@ export default function IndexPage() {
 
           {/* Links */}
           <div className="flex items-end mt-24 ">
-            {/* <div className="w-1/4">
-              <Image
-                src="/cvpr.svg"
-                alt="CVPR 2024"
-                width={0}
-                height={0}
-                className="inline-block mt-0 mb-1 w-5/6"
-              />
-            </div> */}
             <div className="flex-1 mr-6">
               <Separator className="my-0.5 h-[0.5px] bg-black" />
               <div className="flex justify-center space-x-6">
@@ -149,66 +151,7 @@ export default function IndexPage() {
             </h2>
 
             <div className="w-full grid grid-cols-2 mr-4 gap-x-4 gap-y-6">
-              <Image
-                src="/results/hand_ours_0_opt.gif"
-                width={0}
-                height={0}
-                alt="Results 0"
-                placeholder="blur"
-                blurDataURL="/results/hand_ours_0_opt_blur.gif"
-                className="w-full rounded"
-                unoptimized
-              />
-              <Image
-                src="/results/hand_ours_1_opt.gif"
-                width={0}
-                height={0}
-                alt="Results 1"
-                placeholder="blur"
-                blurDataURL="/results/hand_outs_1_opt_blur.gif"
-                className="w-full rounded"
-                unoptimized
-              />
-              <Image
-                src="/results/oakink_ours_0_opt.gif"
-                width={0}
-                height={0}
-                alt="Results 2"
-                placeholder="blur"
-                blurDataURL="/results/oakink_ours_0_opt_blur.gif"
-                className="w-full rounded"
-                unoptimized
-              />
-              <Image
-                src="/results/oakink_ours_1_opt.gif"
-                width={0}
-                height={0}
-                alt="Results 3"
-                placeholder="blur"
-                blurDataURL="/results/oakink_ours_1_opt_blur.gif"
-                className="w-full rounded"
-                unoptimized
-              />
-              <Image
-                src="/results/oakink_ours_2_opt.gif"
-                width={0}
-                height={0}
-                alt="Results 2"
-                placeholder="blur"
-                blurDataURL="/results/oakink_ours_2_opt_blur.gif"
-                className="w-full rounded"
-                unoptimized
-              />
-              <Image
-                src="/results/oakink_ours_3_opt.gif"
-                width={0}
-                height={0}
-                alt="Results 3"
-                placeholder="blur"
-                blurDataURL="/results/oakink_ours_3_opt_blur.gif"
-                className="w-full rounded"
-                unoptimized
-              />
+              <ResultImage imageData={resultImages} />
             </div>
           </div>
 
