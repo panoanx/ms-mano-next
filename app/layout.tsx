@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { TailwindIndicator } from "@/components/tailwind-indicator";
+import { GoogleAnalytics } from "@/components/analytics";
 
 export const metadata: Metadata = {
   title: "MS-MANO",
@@ -15,6 +16,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {process.env.NODE_ENV === "production" && <GoogleAnalytics />}
+      </head>
       <body>
         {children}
         <TailwindIndicator />

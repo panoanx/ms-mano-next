@@ -164,7 +164,7 @@ export default function IndexPage() {
               regarding the paper, its associated code, or any other related
               questions, we encourage you to get in touch with us. Please feel
               free to send your questions via email to{" "}
-              <code className="text-sm mx-1">xiepf2002 # gmail.com</code>.
+              <code className="text-sm mx-1">xiepf2002 at gmail dot com</code>.
             </div>
           </div>
         </div>
