@@ -4,6 +4,7 @@ import { Separator } from "@/components/ui/separator";
 import { authorList, institutionList } from "@/config/author";
 import { bannerImages, resultImages } from "@/config/image";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function IndexPage() {
   return (
@@ -14,13 +15,13 @@ export default function IndexPage() {
           <div>
             <div>
               <div className="w-1/6 flex items-end gap-4">
-                <Image
+                {/* <Image
                   src="/cvpr.svg"
                   alt="CVPR 2024"
                   width={0}
                   height={0}
                   className="inline-block mt-0 mb-1 w-5/6"
-                />
+                /> */}
                 <div className="font-semibold pl-0.5 text-lg text-black">
                   CVPR&apos;24
                 </div>
@@ -49,10 +50,19 @@ export default function IndexPage() {
               <div className="flex flex-wrap text-2xl text-black">
                 {authorList.map((author, index) => (
                   <div key={index} className="flex-shrink-0 mr-4">
-                    <div className="font-semibold leading-loose tracking-tight">
-                      {author.name}
-                      <sup>{author.sup}</sup>
-                    </div>
+                    {author.href ? (
+                      <Link href={author.href} target="_blank">
+                        <div className="font-semibold leading-loose tracking-tight hover:drop-shadow-md">
+                          <span className="underline">{author.name}</span>
+                          <sup>{author.sup}</sup>
+                        </div>
+                      </Link>
+                    ) : (
+                      <div className="font-semibold leading-loose tracking-tight">
+                        {author.name}
+                        <sup>{author.sup}</sup>
+                      </div>
+                    )}
                   </div>
                 ))}
               </div>
@@ -73,7 +83,10 @@ export default function IndexPage() {
             <div className="flex-1 mr-6">
               <Separator className="my-0.5 h-[0.5px] bg-black" />
               <div className="flex justify-center space-x-6">
-                <LinkButton label="Read Paper" href="/paper.pdf" />
+                <LinkButton
+                  label="Read Paper"
+                  href="https://arxiv.org/abs/2404.10227"
+                />
                 <LinkButton label="View Code" href="/" disabled={true} />
                 <LinkButton label="Watch Video" href="/" disabled={true} />
                 <LinkButton

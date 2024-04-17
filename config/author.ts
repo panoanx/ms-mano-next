@@ -8,10 +8,12 @@ export const authorList = [
   {
     name: "Pengfei Xie",
     sup: "1*",
+    href: "https://panoanx.github.io/",
   },
   {
     name: "Wenqiang Xu",
     sup: "2*",
+    href: "https://wenqiangx.github.io/",
   },
   {
     name: "Tutian Tang",
@@ -20,10 +22,12 @@ export const authorList = [
   {
     name: "Zhenjun Yu",
     sup: "2",
+    href: "",
   },
   {
     name: "Cewu Lu",
     sup: "2",
+    href: "http://mvig.org/",
   },
 ] as AuthorProps[];
 
