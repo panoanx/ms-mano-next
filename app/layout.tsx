@@ -4,7 +4,7 @@ import { TailwindIndicator } from "@/components/tailwind-indicator";
 import { GoogleAnalytics } from "@/components/analytics";
 
 export const metadata: Metadata = {
-  title: "MS-MANO",
+  title: "MS-MANO: Enabling Hand Pose Tracking with Biomechanical Constraints",
   description:
     'Project Page for the CVPR 2024 paper: "MS-MANO: Enabling Hand Pose Tracking with Biomechanical Constraints"',
 };
