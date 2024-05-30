@@ -82,20 +82,49 @@ export default function IndexPage() {
           <div className="flex items-end mt-24 ">
             <div className="flex-1 mr-6">
               <Separator className="my-0.5 h-[0.5px] bg-black" />
-              <div className="flex justify-center space-x-6">
+              <div className="flex justify-center gap-5">
                 <LinkButton
                   label="Read Paper"
                   href="https://arxiv.org/abs/2404.10227"
                 />
                 <LinkButton label="View Code" href="/" disabled={true} />
-                <LinkButton label="Watch Video" href="/" disabled={true} />
                 <LinkButton
-                  label="Supplementary Materials"
-                  href="/"
-                  disabled={true}
+                  label="Watch Video"
+                  href="https://youtu.be/jKzsa3sahAE?si=3DIbOzrnR21Bp5s6"
+                  disabled={false}
+                />
+                <LinkButton
+                  label="Explore Poster"
+                  href="/poster.pdf"
+                  disabled={false}
+                />
+                <LinkButton
+                  label="Browse Slides"
+                  href="/poster.pdf"
+                  disabled={false}
                 />
               </div>
               <Separator className="my-0.5 h-[0.5px] bg-black" />
+            </div>
+          </div>
+
+          {/* Video */}
+          <div className="flex mt-16">
+            <h2 className="mt-0 w-1/4 flex-shrink-0 text-3xl font-semibold">
+              Video
+            </h2>
+            <div className="text-xl flex-1 leading-normal text-black text-justify font-serif mr-6">
+              <iframe
+                // width="560"
+                // height="315"
+                className="w-full h-[320px] lg:h-[430px]"
+                src="https://www.youtube.com/embed/jKzsa3sahAE?si=8aV_3GCvnOKvnzSs"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              ></iframe>
             </div>
           </div>
 
