@@ -87,20 +87,20 @@ export default function IndexPage() {
                   label="Read Paper"
                   href="https://arxiv.org/abs/2404.10227"
                 />
-                <LinkButton label="View Code" href="/" disabled={true} />
+                <LinkButton label="Get Code" href="/" disabled={true} />
                 <LinkButton
                   label="Watch Video"
                   href="https://youtu.be/jKzsa3sahAE?si=3DIbOzrnR21Bp5s6"
                   disabled={false}
                 />
                 <LinkButton
-                  label="Explore Poster"
+                  label="View Poster"
                   href="/poster.pdf"
                   disabled={false}
                 />
                 <LinkButton
                   label="Browse Slides"
-                  href="/poster.pdf"
+                  href="/slides.pdf"
                   disabled={false}
                 />
               </div>
