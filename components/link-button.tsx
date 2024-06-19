@@ -6,9 +6,15 @@ interface LinkButtonProps {
   label: string;
   href: string;
   disabled?: boolean;
+  hint?: string;
 }
 
-export function LinkButton({ label, href, disabled = false }: LinkButtonProps) {
+export function LinkButton({
+  label,
+  href,
+  disabled = false,
+  hint,
+}: LinkButtonProps) {
   return (
     <>
       <Button
@@ -23,11 +29,11 @@ export function LinkButton({ label, href, disabled = false }: LinkButtonProps) {
         <Link
           href={href}
           className={cn(
-            "px-2 py-1 font-semibold text-base inline-flex items-center",
+            "px-2 py-1 font-medium text-base inline-flex items-center",
             "group underline",
             disabled
               ? "pointer-events-none no-underline text-gray-500 hover:text-gray-500"
-              : "hover:drop-shadow-md"
+              : "hover:drop-shadow"
           )}
           aria-disabled={disabled}
           tabIndex={disabled ? -1 : 0}
@@ -40,6 +46,10 @@ export function LinkButton({ label, href, disabled = false }: LinkButtonProps) {
             <div className="ml-2 bg-blue-50 border border-blue-200 px-1 pt-1 pb-0.5 rounded text-blue-600 text-[9px] tracking-tighter leading-[6px]">
               <div>coming</div>
               <div>soon</div>
+            </div>
+          ) : hint ? (
+            <div className="ml-2 bg-blue-50 border border-blue-200 px-1 pt-1 pb-0.5 rounded text-blue-600 text-[9px] tracking-tighter leading-[6px]">
+              {hint}
             </div>
           ) : (
             <svg

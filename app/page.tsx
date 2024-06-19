@@ -87,7 +87,12 @@ export default function IndexPage() {
                   label="Read Paper"
                   href="https://arxiv.org/abs/2404.10227"
                 />
-                <LinkButton label="Get Code" href="/" disabled={true} />
+                <LinkButton
+                  label="Code Release"
+                  href="https://github.com/panoanx/ms-mano-unity"
+                  disabled={false}
+                  hint="In Progress"
+                />
                 <LinkButton
                   label="Watch Video"
                   href="https://youtu.be/jKzsa3sahAE?si=3DIbOzrnR21Bp5s6"
@@ -105,26 +110,6 @@ export default function IndexPage() {
                 />
               </div>
               <Separator className="my-0.5 h-[0.5px] bg-black" />
-            </div>
-          </div>
-
-          {/* Video */}
-          <div className="flex mt-16">
-            <h2 className="mt-0 w-1/4 flex-shrink-0 text-3xl font-semibold">
-              Video
-            </h2>
-            <div className="text-xl flex-1 leading-normal text-black text-justify font-serif mr-6">
-              <iframe
-                // width="560"
-                // height="315"
-                className="w-full h-[320px] lg:h-[430px]"
-                src="https://www.youtube.com/embed/jKzsa3sahAE?si=8aV_3GCvnOKvnzSs"
-                title="YouTube video player"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-              ></iframe>
             </div>
           </div>
 
@@ -194,6 +179,26 @@ export default function IndexPage() {
 
             <div className="w-full grid grid-cols-2 mr-4 gap-x-4 gap-y-6">
               <ResultImage imageData={resultImages} />
+            </div>
+          </div>
+
+          {/* Video */}
+          <div className="flex mt-16">
+            <h2 className="mt-0 w-1/4 flex-shrink-0 text-3xl font-semibold">
+              Video
+            </h2>
+            <div className="text-xl flex-1 leading-normal text-black text-justify font-serif mr-6">
+              <iframe
+                // width="560"
+                // height="315"
+                className="w-full h-[320px] lg:h-[430px]"
+                src="https://www.youtube.com/embed/jKzsa3sahAE?si=8aV_3GCvnOKvnzSs"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              ></iframe>
             </div>
           </div>
 
