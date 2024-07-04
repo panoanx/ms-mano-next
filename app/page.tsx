@@ -52,7 +52,7 @@ export default function IndexPage() {
                   <div key={index} className="flex-shrink-0 mr-4">
                     {author.href ? (
                       <Link href={author.href} target="_blank">
-                        <div className="font-semibold leading-loose tracking-tight hover:drop-shadow-md">
+                        <div className="font-semibold leading-loose tracking-tight hover:scale-[1.02] hover:rotate-1">
                           <span className="underline">{author.name}</span>
                           <sup>{author.sup}</sup>
                         </div>
@@ -82,16 +82,20 @@ export default function IndexPage() {
           <div className="flex items-end mt-24 ">
             <div className="flex-1 mr-6">
               <Separator className="my-0.5 h-[0.5px] bg-black" />
-              <div className="flex justify-center gap-5">
+              <div className="flex justify-center gap-6">
                 <LinkButton
                   label="Read Paper"
                   href="https://arxiv.org/abs/2404.10227"
                 />
                 <LinkButton
-                  label="Code Release"
+                  label="MS-MANO-Unity"
                   href="https://github.com/panoanx/ms-mano-unity"
                   disabled={false}
-                  hint="In Progress"
+                />
+                <LinkButton
+                  label="MS-MANO-Dynamics"
+                  href="https://github.com/panoanx/ms-mano-dynamics"
+                  disabled={false}
                 />
                 <LinkButton
                   label="Watch Video"
@@ -212,6 +216,38 @@ export default function IndexPage() {
               questions, we encourage you to get in touch with us. Please feel
               free to send your questions via email to{" "}
               <code className="text-sm mx-1">xiepf2002 at gmail dot com</code>.
+            </div>
+          </div>
+
+          <div className="flex mt-24">
+            <h2 className="mt-0 w-1/4 flex-shrink-0 text-3xl font-semibold">
+              Website
+            </h2>
+            <div className="text-xl leading-normal text-black text-justify font-serif mr-6">
+              The website is a static site built using Next.js and Tailwind CSS.
+              The source code is available at
+              <LinkButton
+                label="github/panoanx/msmano-next"
+                href="https://github.com/panoanx/ms-mano-next"
+                className="font-mono font-normal"
+              />
+            </div>
+          </div>
+
+          <div className="flex mt-24">
+            <h2 className="mt-0 w-1/4 flex-shrink-0 text-3xl font-semibold">
+              BibTeX
+            </h2>
+            <div className="text-xl leading-normal text-black text-justify font-serif mr-6 w-full  bg-gray-100 rounded-xl p-4">
+              <pre className="text-[13px] break-all rounded-lg ">
+                {`@inproceedings{msmano,
+  title = {MS-MANO: Enabling Hand Pose Tracking with Biomechanical Constraints},
+  author = {Xie*, Pengfei and Xu*, Wenqiang and Tang, Tutian and Yu, Zhenjun and Lu, Cewu},
+  booktitle = {{CVPR} IEEE Conference on Computer Vision and Pattern Recognition},
+  pages = {},
+  year = {2024},
+}`}
+              </pre>
             </div>
           </div>
         </div>

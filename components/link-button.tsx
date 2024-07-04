@@ -7,6 +7,7 @@ interface LinkButtonProps {
   href: string;
   disabled?: boolean;
   hint?: string;
+  className?: string;
 }
 
 export function LinkButton({
@@ -14,6 +15,7 @@ export function LinkButton({
   href,
   disabled = false,
   hint,
+  className,
 }: LinkButtonProps) {
   return (
     <>
@@ -21,19 +23,20 @@ export function LinkButton({
         variant="ghost"
         disabled={disabled}
         className={cn(
-          "hover:bg-inherit transition-all",
-          disabled && "cursor-not-allowed"
+          "hover:bg-inherit transition-all p-0",
+          disabled && "cursor-not-allowed",
+          className
         )}
         asChild
       >
         <Link
           href={href}
           className={cn(
-            "px-2 py-1 font-medium text-base inline-flex items-center",
+            "px-1 py-1 font-medium text-base inline-flex items-center",
             "group underline",
             disabled
               ? "pointer-events-none no-underline text-gray-500 hover:text-gray-500"
-              : "hover:drop-shadow"
+              : "hover:drop-sm hover:scale-[1.02] hover:rotate-1 hover:-translate-x-1 transition-all"
           )}
           aria-disabled={disabled}
           tabIndex={disabled ? -1 : 0}
@@ -61,7 +64,7 @@ export function LinkButton({
               className={cn(
                 "transition-all ",
                 !disabled &&
-                  "group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                  "group-hover:translate-x-1 group-hover:-translate-y-1"
               )}
             >
               <path
